@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'pages/Home_page.dart';
+import 'pages/attendance_section/attendance_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,13 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      enableLog: false,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'Quicksand',
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: AttendancePage(),
     );
   }
 }
