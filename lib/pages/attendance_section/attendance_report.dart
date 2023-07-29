@@ -10,94 +10,91 @@ class AttendanceReport extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: DefaultTabController(
-        length: 2,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Ruchika's Presence",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleLarge
-                  ?.copyWith(fontWeight: FontWeight.w600),
+    return DefaultTabController(
+      length: 2,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Ruchika's Presence",
+            style: Theme.of(context)
+                .textTheme
+                .titleLarge
+                ?.copyWith(fontWeight: FontWeight.w600),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                border: Border(
+                    bottom: BorderSide(
+                        width: 1, color: AppColors.darkGrey.withOpacity(0.3)))),
+            child: TabBar(
+              indicatorColor: AppColors.black,
+              labelColor: AppColors.black,
+              labelStyle:
+                  const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              unselectedLabelColor: AppColors.darkGrey.withOpacity(0.6),
+              tabs: const [
+                Tab(text: 'This Week'),
+                Tab(text: 'This Month'),
+              ],
             ),
-            Container(
-              decoration: BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(
-                          width: 1,
-                          color: AppColors.darkGrey.withOpacity(0.3)))),
-              child: TabBar(
-                indicatorColor: AppColors.black,
-                labelColor: AppColors.black,
-                labelStyle:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                unselectedLabelColor: AppColors.darkGrey.withOpacity(0.6),
-                tabs: const [
-                  Tab(text: 'This Week'),
-                  Tab(text: 'This Month'),
-                ],
-              ),
-            ),
-            const SizedBox(height: 10),
-            Expanded(
-              child: TabBarView(
-                children: [
-                  Column(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 25),
-                        margin: const EdgeInsets.symmetric(vertical: 10),
-                        decoration: BoxDecoration(
-                            color: AppColors.blue,
-                            borderRadius: BorderRadius.circular(30)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            reportDetails('Present', '04'),
-                            verticalLine(size),
-                            reportDetails('Absent', '01'),
-                            verticalLine(size),
-                            reportDetails('Percentage', '90%'),
-                          ],
-                        ),
+          ),
+          const SizedBox(height: 10),
+          SizedBox(
+            height: size.height,
+            child: TabBarView(
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.symmetric(vertical: 10),
+                      decoration: BoxDecoration(
+                          color: AppColors.blue,
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          reportDetails('Present', '04'),
+                          verticalLine(size),
+                          reportDetails('Absent', '01'),
+                          verticalLine(size),
+                          reportDetails('Percentage', '90%'),
+                        ],
                       ),
-                      const SizedBox(height: 20),
-                      AttendanceDetails(size: size)
-                    ],
-                  ),
-                  //This month report
-                  Column(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        margin: const EdgeInsets.symmetric(vertical: 10),
-                        decoration: BoxDecoration(
-                            color: AppColors.blue,
-                            borderRadius: BorderRadius.circular(30)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            reportDetails('Present', '25'),
-                            verticalLine(size),
-                            reportDetails('Absent', '04'),
-                            verticalLine(size),
-                            reportDetails('Percentage', '86%'),
-                          ],
-                        ),
+                    ),
+                    const SizedBox(height: 20),
+                    AttendanceDetails(size: size)
+                  ],
+                ),
+                //This month report
+                Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.symmetric(vertical: 10),
+                      decoration: BoxDecoration(
+                          color: AppColors.blue,
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          reportDetails('Present', '25'),
+                          verticalLine(size),
+                          reportDetails('Absent', '04'),
+                          verticalLine(size),
+                          reportDetails('Percentage', '86%'),
+                        ],
                       ),
-                      const SizedBox(height: 20),
-                      AttendanceDetails(size: size)
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                    const SizedBox(height: 20),
+                    AttendanceDetails(size: size)
+                  ],
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
