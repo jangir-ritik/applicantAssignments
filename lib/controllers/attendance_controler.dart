@@ -36,7 +36,7 @@ class AttendanceController extends GetxController {
         date: '26-07-2023',
         droppedBy: "Mr. Venkatesh",
         pickedBy: "Mrs. Keerthi Manisha",
-        droppedTime: "08:46am",
+        droppedTime: "08:56am",
         pickedTime: "12:03pm",
       ),
       // AttendanceDeatilsModel(
