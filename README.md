@@ -7,5 +7,8 @@ Added App Screenshot in assets/images folder
 
 OutPut
 
-<img src="https://github.com/yuvi222/applicantAssignments/blob/assignment/yuvraj-salunke/flutter-developer/assets/images/SS1.jpg"/>  <img src="https://github.com/yuvi222/applicantAssignments/blob/assignment/yuvraj-salunke/flutter-developer/assets/images/SS2.jpg"/>
+<img src="https://github.com/yuvi222/applicantAssignments/blob/assignment/yuvraj-salunke/flutter-developer/assets/images/SS1.jpg"/>  
+
+
+<img src="https://github.com/yuvi222/applicantAssignments/blob/assignment/yuvraj-salunke/flutter-developer/assets/images/SS2.jpg"/>
 
