@@ -72,7 +72,7 @@ class AttendanceDetails extends StatelessWidget {
                     const Text(
                       "Arrived on time",
                       style: TextStyle(
-                          fontSize: 12,
+                          fontSize: 11,
                           fontWeight: FontWeight.w300,
                           color: AppColors.darkGrey),
                     ),
@@ -84,14 +84,14 @@ class AttendanceDetails extends StatelessWidget {
                           'Dropped By  \t- ${attendanceDetails.droppedBy}',
                           style: const TextStyle(
                               color: AppColors.darkGrey,
-                              fontSize: 14,
+                              fontSize: 12,
                               fontWeight: FontWeight.w500),
                         ),
                         Text(
                           '- ${attendanceDetails.droppedTime}',
                           style: const TextStyle(
                               color: AppColors.darkGrey,
-                              fontSize: 14,
+                              fontSize: 12,
                               fontWeight: FontWeight.w300),
                         ),
                       ],
@@ -101,16 +101,17 @@ class AttendanceDetails extends StatelessWidget {
                       children: [
                         Text(
                           'Picked up by - ${attendanceDetails.pickedBy}',
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                               color: AppColors.darkGrey,
-                              fontSize: 14,
+                              fontSize: 12,
                               fontWeight: FontWeight.w500),
                         ),
                         Text(
                           '- ${attendanceDetails.pickedTime}',
                           style: const TextStyle(
                               color: AppColors.darkGrey,
-                              fontSize: 14,
+                              fontSize: 12,
                               fontWeight: FontWeight.w300),
                         ),
                       ],
